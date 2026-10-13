@@ -1,0 +1,17 @@
+scope,group,variable,n,q1,q3,iqr,lower_fence,upper_fence,n_outliers,percent_outliers,outlier_values,outlier_row_ids
+overall,all rows,bill_length_mm,342,39.225,48.5,9.275,25.3125,62.4125,0,0.0,,
+by_species,Adelie,bill_length_mm,151,36.75,40.75,4.0,30.75,46.75,0,0.0,,
+by_species,Chinstrap,bill_length_mm,68,46.35,51.075,4.725,39.2625,58.1625,0,0.0,,
+by_species,Gentoo,bill_length_mm,123,45.3,49.55,4.25,38.925,55.925,1,0.813,59.6,index=184
+overall,all rows,bill_depth_mm,342,15.6,18.7,3.1,10.95,23.35,0,0.0,,
+by_species,Adelie,bill_depth_mm,151,17.5,19.0,1.5,15.25,21.25,1,0.662,21.5,index=18
+by_species,Chinstrap,bill_depth_mm,68,17.5,19.4,1.9,14.65,22.25,0,0.0,,
+by_species,Gentoo,bill_depth_mm,123,14.2,15.7,1.5,11.95,17.95,0,0.0,,
+overall,all rows,flipper_length_mm,342,190.0,213.0,23.0,155.5,247.5,0,0.0,,
+by_species,Adelie,flipper_length_mm,151,186.0,195.0,9.0,172.5,208.5,2,1.325,"172, 210","index=27, index=128"
+by_species,Chinstrap,flipper_length_mm,68,191.0,201.0,10.0,176.0,216.0,0,0.0,,
+by_species,Gentoo,flipper_length_mm,123,212.0,221.0,9.0,198.5,234.5,0,0.0,,
+overall,all rows,body_mass_g,342,3550.0,4750.0,1200.0,1750.0,6550.0,0,0.0,,
+by_species,Adelie,body_mass_g,151,3350.0,4000.0,650.0,2375.0,4975.0,0,0.0,,
+by_species,Chinstrap,body_mass_g,68,3487.5,3950.0,462.5,2793.75,4643.75,2,2.941,"2700, 4800","index=311, index=312"
+by_species,Gentoo,body_mass_g,123,4700.0,5500.0,800.0,3500.0,6700.0,0,0.0,,

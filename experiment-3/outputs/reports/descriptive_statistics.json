@@ -1,0 +1,96 @@
+{
+  "numerical_columns": [
+    "bill_length_mm",
+    "bill_depth_mm",
+    "flipper_length_mm",
+    "body_mass_g",
+    "year"
+  ],
+  "categorical_columns": [
+    "species",
+    "island",
+    "sex"
+  ],
+  "numerical_summary": {
+    "bill_length_mm": {
+      "count": 342.0,
+      "mean": 43.9219298245614,
+      "std": 5.4595837139265315,
+      "min": 32.1,
+      "25%": 39.225,
+      "50%": 44.45,
+      "75%": 48.5,
+      "max": 59.6
+    },
+    "bill_depth_mm": {
+      "count": 342.0,
+      "mean": 17.151169590643274,
+      "std": 1.9747931568167814,
+      "min": 13.1,
+      "25%": 15.6,
+      "50%": 17.3,
+      "75%": 18.7,
+      "max": 21.5
+    },
+    "flipper_length_mm": {
+      "count": 342.0,
+      "mean": 200.91520467836258,
+      "std": 14.061713679356886,
+      "min": 172.0,
+      "25%": 190.0,
+      "50%": 197.0,
+      "75%": 213.0,
+      "max": 231.0
+    },
+    "body_mass_g": {
+      "count": 342.0,
+      "mean": 4201.754385964912,
+      "std": 801.9545356980955,
+      "min": 2700.0,
+      "25%": 3550.0,
+      "50%": 4050.0,
+      "75%": 4750.0,
+      "max": 6300.0
+    },
+    "year": {
+      "count": 342.0,
+      "mean": 2008.029239766082,
+      "std": 0.8171684218896798,
+      "min": 2007.0,
+      "25%": 2007.0,
+      "50%": 2008.0,
+      "75%": 2009.0,
+      "max": 2009.0
+    }
+  },
+  "categorical_summary": {
+    "species": {
+      "count": 342,
+      "unique": 3,
+      "top": "Adelie",
+      "freq": 151
+    },
+    "island": {
+      "count": 342,
+      "unique": 3,
+      "top": "Biscoe",
+      "freq": 167
+    },
+    "sex": {
+      "count": 342,
+      "unique": 3,
+      "top": "male",
+      "freq": 168
+    }
+  },
+  "unique_values": {
+    "species": 3,
+    "island": 3,
+    "bill_length_mm": 164,
+    "bill_depth_mm": 80,
+    "flipper_length_mm": 55,
+    "body_mass_g": 94,
+    "sex": 3,
+    "year": 3
+  }
+}

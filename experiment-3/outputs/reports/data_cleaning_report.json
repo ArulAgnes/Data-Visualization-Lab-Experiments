@@ -1,0 +1,309 @@
+{
+  "generated_at_utc": "2026-10-13T17:23:45+00:00",
+  "source": "D:\\Opean Ai\\Data-Visualization-Lab-Experiments\\experiment-3\\data\\raw\\penguins.csv",
+  "raw_profile": {
+    "rows": 344,
+    "columns": 8,
+    "duplicate_rows": 0,
+    "missing_total": 19,
+    "missing_by_column": {
+      "sex": {
+        "count": 11,
+        "percent": 3.2
+      },
+      "bill_depth_mm": {
+        "count": 2,
+        "percent": 0.58
+      },
+      "flipper_length_mm": {
+        "count": 2,
+        "percent": 0.58
+      },
+      "bill_length_mm": {
+        "count": 2,
+        "percent": 0.58
+      },
+      "body_mass_g": {
+        "count": 2,
+        "percent": 0.58
+      },
+      "island": {
+        "count": 0,
+        "percent": 0.0
+      },
+      "species": {
+        "count": 0,
+        "percent": 0.0
+      },
+      "year": {
+        "count": 0,
+        "percent": 0.0
+      }
+    },
+    "column_names": [
+      "species",
+      "island",
+      "bill_length_mm",
+      "bill_depth_mm",
+      "flipper_length_mm",
+      "body_mass_g",
+      "sex",
+      "year"
+    ],
+    "dtypes": {
+      "species": "str",
+      "island": "str",
+      "bill_length_mm": "float64",
+      "bill_depth_mm": "float64",
+      "flipper_length_mm": "float64",
+      "body_mass_g": "float64",
+      "sex": "str",
+      "year": "int64"
+    }
+  },
+  "checks": [
+    {
+      "check": "categorical_whitespace",
+      "result": "0 column(s) required trimming",
+      "columns": [],
+      "decision": "no change needed",
+      "reason": "trailing/leading spaces create accidental extra categories"
+    },
+    {
+      "check": "duplicate_rows",
+      "result": "0 exact duplicate row(s) found",
+      "decision": "no row removed",
+      "reason": "duplicate observations bias summary statistics"
+    },
+    {
+      "check": "rows_without_measurements",
+      "result": "2 row(s) missing all measurement columns ['bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g']",
+      "decision": "2 row(s) dropped",
+      "reason": "rows with no measured value cannot contribute to any numerical analysis (documented justification for row removal)"
+    },
+    {
+      "check": "categorical_missing_values",
+      "result": "missing values found in {'sex': 9}",
+      "decision": "filled with 'Unknown'",
+      "reason": "a labelled 'Unknown' category keeps every observation in the dataset and makes the missingness visible instead of hiding it"
+    },
+    {
+      "check": "impossible_or_suspicious_values",
+      "result": {
+        "out_of_range": {},
+        "non_positive": {},
+        "non_finite": {}
+      },
+      "decision": "no violation found",
+      "reason": "an out-of-range value may be a measurement error *or* a genuine extreme observation; deleting it without verification would hide information"
+    },
+    {
+      "check": "constant_columns",
+      "result": "0 constant column(s): []",
+      "decision": "no change needed",
+      "reason": "constant columns carry no variance for correlation analysis"
+    },
+    {
+      "check": "data_types",
+      "result": {
+        "species": "str",
+        "island": "str",
+        "bill_length_mm": "float64",
+        "bill_depth_mm": "float64",
+        "flipper_length_mm": "float64",
+        "body_mass_g": "float64",
+        "sex": "str",
+        "year": "int64"
+      },
+      "decision": "no conversion applied - every column already has a type that matches its content; conversions are only made when justified",
+      "reason": "wrong conversions (e.g. numbers read as text) silently break statistics"
+    }
+  ],
+  "actions": [
+    {
+      "action": "drop_all_measurements_missing",
+      "rows": 2
+    },
+    {
+      "action": "fill_categorical_missing",
+      "columns": {
+        "sex": 9
+      },
+      "value": "Unknown"
+    }
+  ],
+  "columns_modified": [
+    "sex"
+  ],
+  "columns_dropped": [],
+  "rows_removed": {
+    "total": 2,
+    "duplicates": 0,
+    "all_measurements_missing": 2
+  },
+  "decisions": [
+    "Dropped 2 row(s) whose every measurement column was missing.",
+    "Categorical missing values filled with 'Unknown' (columns: ['sex']). Numerical missing values were left untouched."
+  ],
+  "flagged_values": {
+    "out_of_range": {},
+    "non_positive": {},
+    "non_finite": {}
+  },
+  "constant_columns": [],
+  "cleaned_profile": {
+    "rows": 342,
+    "columns": 8,
+    "duplicate_rows": 0,
+    "missing_total": 0,
+    "missing_by_column": {
+      "species": {
+        "count": 0,
+        "percent": 0.0
+      },
+      "island": {
+        "count": 0,
+        "percent": 0.0
+      },
+      "bill_length_mm": {
+        "count": 0,
+        "percent": 0.0
+      },
+      "bill_depth_mm": {
+        "count": 0,
+        "percent": 0.0
+      },
+      "flipper_length_mm": {
+        "count": 0,
+        "percent": 0.0
+      },
+      "body_mass_g": {
+        "count": 0,
+        "percent": 0.0
+      },
+      "sex": {
+        "count": 0,
+        "percent": 0.0
+      },
+      "year": {
+        "count": 0,
+        "percent": 0.0
+      }
+    },
+    "column_names": [
+      "species",
+      "island",
+      "bill_length_mm",
+      "bill_depth_mm",
+      "flipper_length_mm",
+      "body_mass_g",
+      "sex",
+      "year"
+    ],
+    "dtypes": {
+      "species": "str",
+      "island": "str",
+      "bill_length_mm": "float64",
+      "bill_depth_mm": "float64",
+      "flipper_length_mm": "float64",
+      "body_mass_g": "float64",
+      "sex": "str",
+      "year": "int64"
+    }
+  },
+  "before_after": [
+    {
+      "metric": "row_count",
+      "before": 344,
+      "after": 342
+    },
+    {
+      "metric": "column_count",
+      "before": 8,
+      "after": 8
+    },
+    {
+      "metric": "duplicate_rows",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "metric": "missing_values",
+      "before": 19,
+      "after": 0
+    },
+    {
+      "metric": "missing_columns",
+      "before": 5,
+      "after": 0
+    }
+  ],
+  "missing_before": {
+    "sex": {
+      "missing_count": 11,
+      "missing_percent": 3.2
+    },
+    "bill_depth_mm": {
+      "missing_count": 2,
+      "missing_percent": 0.58
+    },
+    "flipper_length_mm": {
+      "missing_count": 2,
+      "missing_percent": 0.58
+    },
+    "bill_length_mm": {
+      "missing_count": 2,
+      "missing_percent": 0.58
+    },
+    "body_mass_g": {
+      "missing_count": 2,
+      "missing_percent": 0.58
+    },
+    "island": {
+      "missing_count": 0,
+      "missing_percent": 0.0
+    },
+    "species": {
+      "missing_count": 0,
+      "missing_percent": 0.0
+    },
+    "year": {
+      "missing_count": 0,
+      "missing_percent": 0.0
+    }
+  },
+  "missing_after": {
+    "species": {
+      "missing_count": 0,
+      "missing_percent": 0.0
+    },
+    "island": {
+      "missing_count": 0,
+      "missing_percent": 0.0
+    },
+    "bill_length_mm": {
+      "missing_count": 0,
+      "missing_percent": 0.0
+    },
+    "bill_depth_mm": {
+      "missing_count": 0,
+      "missing_percent": 0.0
+    },
+    "flipper_length_mm": {
+      "missing_count": 0,
+      "missing_percent": 0.0
+    },
+    "body_mass_g": {
+      "missing_count": 0,
+      "missing_percent": 0.0
+    },
+    "sex": {
+      "missing_count": 0,
+      "missing_percent": 0.0
+    },
+    "year": {
+      "missing_count": 0,
+      "missing_percent": 0.0
+    }
+  }
+}

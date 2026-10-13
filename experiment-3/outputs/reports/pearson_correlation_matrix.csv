@@ -1,0 +1,6 @@
+,bill_length_mm,bill_depth_mm,flipper_length_mm,body_mass_g,year
+bill_length_mm,1.0,-0.2351,0.6562,0.5951,0.0545
+bill_depth_mm,-0.2351,1.0,-0.5839,-0.4719,-0.0604
+flipper_length_mm,0.6562,-0.5839,1.0,0.8712,0.1697
+body_mass_g,0.5951,-0.4719,0.8712,1.0,0.0422
+year,0.0545,-0.0604,0.1697,0.0422,1.0

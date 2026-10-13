@@ -1,0 +1,51 @@
+{
+  "model": "simple linear regression (sklearn LinearRegression)",
+  "predictor": "flipper_length_mm",
+  "target": "body_mass_g",
+  "equation": "body_mass_g = -5741.2649 + 49.5057 * flipper_length_mm",
+  "n_total": 342,
+  "n_train": 256,
+  "n_test": 86,
+  "split": "train/test split (75/25), random_state=42",
+  "intercept_b0": -5741.264904,
+  "slope_b1": 49.505708,
+  "pearson_r": 0.871202,
+  "r_squared_from_r": 0.758993,
+  "scipy_linregress": {
+    "slope": 49.685566,
+    "intercept": -5780.831358,
+    "r_value": 0.871202,
+    "p_value": 4.370680963001043e-107,
+    "standard_error_of_slope": 1.518404
+  },
+  "test_metrics": {
+    "n": 86,
+    "MAE": 281.978762,
+    "MSE": 121093.984806,
+    "RMSE": 347.98561,
+    "R2": 0.783379
+  },
+  "full_data_metrics": {
+    "n": 342,
+    "MAE": 313.41446,
+    "MSE": 154564.329948,
+    "RMSE": 393.146703,
+    "R2": 0.758964
+  },
+  "residual_summary": {
+    "mean": -3.430186,
+    "std": 393.707756,
+    "min": -1063.831051,
+    "max": 1282.214613
+  },
+  "prediction_example": {
+    "input_variable": "flipper_length_mm",
+    "input_value": 197.0,
+    "predicted_variable": "body_mass_g",
+    "predicted_value": 4011.3595919974123,
+    "data_min": 172.0,
+    "data_max": 231.0,
+    "within_observed_range": true,
+    "equation": "body_mass_g = -5741.2649 + 49.5057 * flipper_length_mm"
+  }
+}

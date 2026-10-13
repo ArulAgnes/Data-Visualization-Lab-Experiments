@@ -1,0 +1,121 @@
+2026-10-13 22:43:43,990 | INFO    | ========================================================================
+2026-10-13 22:43:43,990 | INFO    | EXPERIMENT 3 - Exploratory Data Analysis Through Statistical Visualization
+2026-10-13 22:43:43,990 | INFO    | ========================================================================
+2026-10-13 22:43:44,025 | INFO    | Python 3.11.9 on Windows-10-10.0.26300-SP0
+2026-10-13 22:43:44,025 | INFO    | Colab=False Kaggle=False
+2026-10-13 22:43:44,025 | INFO    |   library pandas     3.0.5
+2026-10-13 22:43:44,025 | INFO    |   library numpy      2.4.6
+2026-10-13 22:43:44,025 | INFO    |   library matplotlib 3.11.2
+2026-10-13 22:43:44,025 | INFO    |   library seaborn    0.13.2
+2026-10-13 22:43:44,025 | INFO    |   library scipy      1.17.1
+2026-10-13 22:43:44,025 | INFO    |   library sklearn    1.9.0
+2026-10-13 22:43:44,025 | INFO    | Kaggle credentials available: True (contents never displayed)
+2026-10-13 22:43:44,025 | INFO    | Loading dataset: data\raw\penguins.csv
+2026-10-13 22:43:44,028 | INFO    | Dataset shape: 344 x 8
+2026-10-13 22:43:44,028 | INFO    | Columns: ['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex', 'year']
+2026-10-13 22:43:44,028 | INFO    | Duplicate rows: 0 | missing values: 19
+2026-10-13 22:43:44,061 | INFO    | Saved cleaned dataset -> D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\data\processed\cleaned_dataset.csv
+2026-10-13 22:43:44,061 | INFO    | Saved cleaning report -> D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\data_cleaning_report.json
+2026-10-13 22:43:44,061 | INFO    | Numerical columns: ['bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'year']
+2026-10-13 22:43:44,061 | INFO    | Continuous measurement columns: ['bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g']
+2026-10-13 22:43:44,061 | INFO    | Categorical columns: ['species', 'island', 'sex']
+2026-10-13 22:43:44,080 | INFO    | Descriptive statistics (numerical):
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+year               342.0  2008.029240    0.817168  2007.0  2007.000  2008.00  2009.0  2009.0
+2026-10-13 22:43:44,082 | INFO    | Descriptive statistics (categorical):
+       species  island   sex
+count      342     342   342
+unique       3       3     3
+top     Adelie  Biscoe  male
+freq       151     167   168
+2026-10-13 22:43:44,410 | INFO    | Saved distribution_gaussian.png | skewness=-0.044
+2026-10-13 22:43:44,744 | INFO    | Saved distribution_uniform.png | skewness=0.002
+2026-10-13 22:43:45,078 | INFO    | Saved distribution_right_skewed.png | skewness=1.982
+2026-10-13 22:43:45,416 | INFO    | Saved distribution_left_skewed.png | skewness=-1.982
+2026-10-13 22:43:45,759 | INFO    | Saved distribution_bimodal.png
+2026-10-13 22:43:45,768 | INFO    | Saved distribution summary -> D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\distribution_summary.csv
+2026-10-13 22:43:45,776 | INFO    | Dataset distribution summary:
+         variable        mean  median        std  skewness                   shape
+   bill_length_mm   43.921930   44.45   5.459584  0.052885 approximately symmetric
+    bill_depth_mm   17.151170   17.30   1.974793 -0.142835 approximately symmetric
+flipper_length_mm  200.915205  197.00  14.061714  0.344164 approximately symmetric
+      body_mass_g 4201.754386 4050.00 801.954536  0.468264 approximately symmetric
+2026-10-13 22:43:47,638 | INFO    | Saved dataset distribution figures
+2026-10-13 22:43:47,851 | INFO    | Saved correlation_strong_positive.png (r=0.950)
+2026-10-13 22:43:48,059 | INFO    | Saved correlation_strong_negative.png (r=-0.950)
+2026-10-13 22:43:48,267 | INFO    | Saved correlation_weak_positive.png (r=0.300)
+2026-10-13 22:43:48,554 | INFO    | Saved correlation_weak_negative.png (r=-0.300)
+2026-10-13 22:43:48,794 | INFO    | Saved correlation_perfect_positive.png (r=1.000)
+2026-10-13 22:43:49,046 | INFO    | Saved correlation_perfect_negative.png (r=-1.000)
+2026-10-13 22:43:49,445 | INFO    | Saved correlation_no_linear.png (r_ind=-0.070, r_par=0.000)
+2026-10-13 22:43:49,768 | INFO    | Real pair flipper_length_mm~body_mass_g: r=0.871 p=4.37e-107 n=342
+2026-10-13 22:43:50,072 | INFO    | Real pair bill_length_mm~flipper_length_mm: r=0.656 p=1.74e-43 n=342
+2026-10-13 22:43:50,329 | INFO    | Real pair bill_depth_mm~flipper_length_mm: r=-0.584 p=1.23e-32 n=342
+2026-10-13 22:43:50,645 | INFO    | Real pair year~body_mass_g: r=0.042 p=0.437 n=342
+2026-10-13 22:43:50,645 | INFO    | Teaching example x=[2.0, 4.0, 6.0, 8.0, 10.0] y=[1.0, 3.0, 5.0, 7.0, 9.0]
+2026-10-13 22:43:50,645 | INFO    |   manual_formula           1.0
+2026-10-13 22:43:50,645 | INFO    |   scipy.stats.pearsonr     1.0
+2026-10-13 22:43:50,645 | INFO    |   numpy.corrcoef           0.9999999999999999
+2026-10-13 22:43:50,645 | INFO    |   pandas.DataFrame.corr    1.0
+2026-10-13 22:43:50,645 | INFO    |   max_absolute_difference  1.1102230246251565e-16
+2026-10-13 22:43:50,670 | INFO    | Correlation matrix saved -> D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\pearson_correlation_matrix.csv
+2026-10-13 22:43:51,160 | INFO    | Saved pearson_correlation_heatmap.png
+2026-10-13 22:43:51,180 | INFO    | Regression: body_mass_g = -5741.2649 + 49.5057 * flipper_length_mm
+2026-10-13 22:43:51,180 | INFO    |   split: train/test split (75/25), random_state=42
+2026-10-13 22:43:51,180 | INFO    |   test metrics: {'n': 86, 'MAE': 281.9787618642736, 'MSE': 121093.9848062458, 'RMSE': 347.98561005628636, 'R2': 0.783379462995984}
+2026-10-13 22:43:52,362 | INFO    | Saved regression metrics -> D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\regression_metrics.json
+2026-10-13 22:43:52,405 | INFO    | Saved outlier report -> D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\outlier_report.csv
+2026-10-13 22:43:52,405 | INFO    | Outliers overall: 0 | outliers inside subgroups (species): 6
+2026-10-13 22:43:53,679 | INFO    | Saved box plots (synthetic example outliers: 4)
+2026-10-13 22:43:57,717 | INFO    | Saved additional statistical visualisations
+2026-10-13 22:43:58,191 | INFO    | Packaged outputs -> D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\eda_experiment3_outputs.zip
+2026-10-13 22:43:58,191 | INFO    | ========================================================================
+2026-10-13 22:43:58,191 | INFO    | DONE in 14.2s - 43 files generated
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\data\processed\cleaned_dataset.csv
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\eda_experiment3_outputs.zip
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\logs\eda_run.log
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\actual_vs_predicted.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\barplot_mean_mass_by_species.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\boxplot_all_numeric.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\boxplot_outlier_detection.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\boxplot_synthetic_example.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\correlation_no_linear.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\correlation_perfect_negative.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\correlation_perfect_positive.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\correlation_strong_negative.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\correlation_strong_positive.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\correlation_weak_negative.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\correlation_weak_positive.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\countplots_categorical.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\dataset_distributions.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\dataset_qq_plots.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\distribution_bimodal.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\distribution_gaussian.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\distribution_left_skewed.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\distribution_right_skewed.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\distribution_uniform.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\linear_regression_fit.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\pairplot.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\pearson_correlation_heatmap.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\real_scatter_bill_depth_mm_vs_flipper_length_mm.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\real_scatter_bill_length_mm_vs_flipper_length_mm.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\real_scatter_flipper_length_mm_vs_body_mass_g.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\real_scatter_year_vs_body_mass_g.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\regression_residuals.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\residual_distribution.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\plots\violin_by_species.png
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\correlation_demo_summary.csv
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\data_cleaning_report.json
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\dataset_distribution_summary.csv
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\dataset_profile.json
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\descriptive_statistics.json
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\distribution_summary.csv
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\outlier_report.csv
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\pearson_correlation_matrix.csv
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\pearson_formula_example.json
+2026-10-13 22:43:58,191 | INFO    |   D:\Opean Ai\Data-Visualization-Lab-Experiments\experiment-3\outputs\reports\regression_metrics.json
+2026-10-13 22:43:58,191 | INFO    | ========================================================================

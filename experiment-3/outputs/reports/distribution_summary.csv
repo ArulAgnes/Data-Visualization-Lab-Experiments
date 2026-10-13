@@ -1,0 +1,6 @@
+variable,n,mean,median,std,min,max,skewness,kurtosis,shapiro_p_value
+distribution_gaussian,1000,49.7111,50.0618,9.8922,13.5159,81.7885,-0.0437,0.0854,0.7576
+distribution_uniform,1000,49.7178,49.4824,29.1586,0.1233,99.9105,0.0021,-1.2382,0.0
+distribution_right_skewed,1500,1.1801,1.0021,0.762,0.112,6.735,1.9823,6.3237,0.0
+distribution_left_skewed,1500,-1.1801,-1.0021,0.762,-6.735,-0.112,-1.9823,6.3237,0.0
+distribution_bimodal,1600,54.7919,54.0278,16.1327,22.2128,89.0731,0.011,-1.4964,0.0

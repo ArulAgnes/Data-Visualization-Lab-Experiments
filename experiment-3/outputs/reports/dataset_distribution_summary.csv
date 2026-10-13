@@ -1,0 +1,5 @@
+variable,n,mean,median,std,min,max,skewness,kurtosis,shapiro_p_value,shape
+bill_length_mm,342,43.9219,44.45,5.4596,32.1,59.6,0.0529,-0.8808,0.0,approximately symmetric
+bill_depth_mm,342,17.1512,17.3,1.9748,13.1,21.5,-0.1428,-0.9112,0.0,approximately symmetric
+flipper_length_mm,342,200.9152,197.0,14.0617,172.0,231.0,0.3442,-0.9874,0.0,approximately symmetric
+body_mass_g,342,4201.7544,4050.0,801.9545,2700.0,6300.0,0.4683,-0.7262,0.0,approximately symmetric

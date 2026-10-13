@@ -1,0 +1,9 @@
+demo,n,pearson_r
+strong_positive,120,0.95
+strong_negative,120,-0.95
+weak_positive,200,0.3
+weak_negative,200,-0.3
+no_linear_independent,200,-0.0702
+no_linear_parabola,200,0.0005
+perfect_positive,50,1.0
+perfect_negative,50,-1.0
