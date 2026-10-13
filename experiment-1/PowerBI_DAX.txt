@@ -1,0 +1,42 @@
+-- ============================================================
+-- Power BI DAX Measures for Iris Dataset Analytics Dashboard
+-- ============================================================
+
+-- Total number of flowers in the dataset
+Total Flowers = COUNTROWS(Iris)
+
+-- Number of distinct species
+Species Count = DISTINCTCOUNT(Iris[Species])
+
+-- Average Sepal Length across all flowers
+Average Sepal Length = AVERAGE(Iris[SepalLengthCm])
+
+-- Average Sepal Width across all flowers
+Average Sepal Width = AVERAGE(Iris[SepalWidthCm])
+
+-- Average Petal Length across all flowers
+Average Petal Length = AVERAGE(Iris[PetalLengthCm])
+
+-- Average Petal Width across all flowers
+Average Petal Width = AVERAGE(Iris[PetalWidthCm])
+
+-- Count of Iris-setosa flowers
+Setosa Count =
+CALCULATE(
+    [Total Flowers],
+    Iris[Species] = "Iris-setosa"
+)
+
+-- Count of Iris-versicolor flowers
+Versicolor Count =
+CALCULATE(
+    [Total Flowers],
+    Iris[Species] = "Iris-versicolor"
+)
+
+-- Count of Iris-virginica flowers
+Virginica Count =
+CALCULATE(
+    [Total Flowers],
+    Iris[Species] = "Iris-virginica"
+)
